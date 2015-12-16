@@ -80,7 +80,7 @@ cat > /etc/shadowsocks-libev/config.json<<-EOF
     "local_port":1080,
     "password":"${shadowsockspwd}",
     "timeout":60,
-    "method":"rc4-md5"
+    "method":"aes-256-cfb"
 }
 EOF
 
@@ -97,7 +97,7 @@ update-rc.d shadowsocks-libev defaults
     echo -e "Your Server Port: ${serverport}"
     echo -e "Your Password: ${shadowsockspwd}"
     echo -e "Your Local Port: 1080"
-    echo -e "Your Encryption Method:rc4-md5"
+    echo -e "Your Encryption Method:aes-256-cfb"
 }
 ############################### uninstall function##################################
 function uninstall_shadowsocks_tennfy(){
